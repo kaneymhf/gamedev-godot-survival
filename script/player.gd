@@ -42,3 +42,7 @@ func checkDirection(playerDirection: Vector2):
 		player_last_dir = "nw"
 	if playerDirection.x < -0.5 and playerDirection.y > 0.5:
 		player_last_dir = "sw"
+
+
+func player():
+	pass
