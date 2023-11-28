@@ -45,6 +45,8 @@ func checkDirection(playerDirection: Vector2):
 	if playerDirection.x < -0.5 and playerDirection.y > 0.5:
 		player_last_dir = "sw"
 
+func collect(item: InventoryItem):
+	inventory.insert(item)
 
 func player():
 	pass
