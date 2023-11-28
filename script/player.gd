@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var inventory: Inventory
+
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var speed = 100
