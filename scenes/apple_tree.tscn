@@ -40,27 +40,29 @@ item = ExtResource("2_fqjfu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4xp1s")
-animation = &"no_apples"
+animation = &"apples"
 
 [node name="pickable_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickable_area"]
+visible = false
+position = Vector2(-8, -6)
 shape = SubResource("CircleShape2D_8as2s")
 
 [node name="growth_timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="spawn_apples_markers" type="CanvasGroup" parent="."]
 
-[node name="pressLabel" type="Label" parent="."]
-offset_left = -12.0
-offset_top = -39.0
-offset_right = 12.0
-offset_bottom = -13.0
-text = "E"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Marker2D" type="Marker2D" parent="spawn_apples_markers"]
+position = Vector2(-4, 3)
+
+[node name="Marker2D2" type="Marker2D" parent="spawn_apples_markers"]
+position = Vector2(7, -2)
+
+[node name="Marker2D3" type="Marker2D" parent="spawn_apples_markers"]
+position = Vector2(-8, -6)
 
 [connection signal="body_entered" from="pickable_area" to="." method="_on_pickable_area_body_entered"]
 [connection signal="body_exited" from="pickable_area" to="." method="_on_pickable_area_body_exited"]

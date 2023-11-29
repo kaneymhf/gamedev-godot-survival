@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cviv0ikpnxw8o"]
+[gd_scene load_steps=13 format=3 uid="uid://cviv0ikpnxw8o"]
 
 [ext_resource type="PackedScene" uid="uid://cxt77kk6jt20b" path="res://scenes/player.tscn" id="1_j5alx"]
 [ext_resource type="Texture2D" uid="uid://ft1moi7113ft" path="res://art/environment/survivalgame-terrian-defult.png" id="2_63r04"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cxswe7i2cvyp" path="res://art/environment/survivalgame-trees.png" id="4_1juua"]
 [ext_resource type="Texture2D" uid="uid://de5a51jysprhp" path="res://art/environment/survivalgame-terrian-water.png" id="5_bkgkr"]
 [ext_resource type="PackedScene" uid="uid://c4xxcuj2xirmx" path="res://scenes/apple_tree.tscn" id="6_j1uml"]
+[ext_resource type="PackedScene" uid="uid://c1r0qdrtej1kf" path="res://scenes/stick_collectable.tscn" id="7_32le7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36bjx"]
 texture = ExtResource("2_63r04")
@@ -292,3 +293,12 @@ position = Vector2(-61, -41)
 
 [node name="apple_tree3" parent="." instance=ExtResource("6_j1uml")]
 position = Vector2(279, 86)
+
+[node name="stick_collectable" parent="." instance=ExtResource("7_32le7")]
+position = Vector2(94, 145)
+
+[node name="stick_collectable2" parent="." instance=ExtResource("7_32le7")]
+position = Vector2(81, 71)
+
+[node name="stick_collectable3" parent="." instance=ExtResource("7_32le7")]
+position = Vector2(261, 135)
