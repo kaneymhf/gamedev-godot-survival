@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd2170l8j2q0l"]
+
+[ext_resource type="Texture2D" uid="uid://v3r6sctr2ssh" path="res://art/weapon/Arrow.png" id="1_3bptv"]
+[ext_resource type="Script" path="res://script/arrow.gd" id="1_ipmth"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a4rq3"]
+radius = 1.0
+height = 4.0
+
+[sub_resource type="Animation" id="Animation_obsa6"]
+resource_name = "shot"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_qyu8a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x4bew"]
+_data = {
+"RESET": SubResource("Animation_qyu8a"),
+"shot": SubResource("Animation_obsa6")
+}
+
+[node name="arrow" type="Area2D"]
+script = ExtResource("1_ipmth")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_3bptv")
+hframes = 2
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_a4rq3")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(2.5, 0)
+scale = Vector2(0.15, 0.1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x4bew")
+}
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
