@@ -9,7 +9,7 @@ extends CharacterBody2D
 var speed = 100
 var player_state: String = "idle"
 var player_last_dir: String = "s"
-var bow_equiped = true
+var bow_equiped = false
 var bow_cooldown = true
 var mouse_loc_from_player = null
 
@@ -28,7 +28,7 @@ func _physics_process(delta):
 		velocity = direction * speed
 		move_and_slide()
 	
-	if Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("toggle_weapon"):
 		bow_equiped = !bow_equiped
 	
 	var mouse_position = get_global_mouse_position()
