@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://di1j0utir0w3j"]
+
+[ext_resource type="Texture2D" uid="uid://spk3tl85v1vh" path="res://art/character/SlimeIcon.png" id="1_2wgl2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cigh7"]
+radius = 3.16228
+
+[node name="slime_collectable" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2wgl2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cigh7")

@@ -471,7 +471,6 @@ frame_progress = 0.999136
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_iqcyq")
-debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)

@@ -15,10 +15,6 @@ run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
-[debug]
-
-shapes/collision/shape_color=Color(0.772549, 0.0509804, 0.423529, 0.419608)
-
 [input]
 
 ui_left={

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cviv0ikpnxw8o"]
+[gd_scene load_steps=14 format=3 uid="uid://cviv0ikpnxw8o"]
 
 [ext_resource type="PackedScene" uid="uid://cxt77kk6jt20b" path="res://scenes/player.tscn" id="1_j5alx"]
 [ext_resource type="Texture2D" uid="uid://ft1moi7113ft" path="res://art/environment/survivalgame-terrian-defult.png" id="2_63r04"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://de5a51jysprhp" path="res://art/environment/survivalgame-terrian-water.png" id="5_bkgkr"]
 [ext_resource type="PackedScene" uid="uid://c4xxcuj2xirmx" path="res://scenes/apple_tree.tscn" id="6_j1uml"]
 [ext_resource type="PackedScene" uid="uid://c1r0qdrtej1kf" path="res://scenes/stick_collectable.tscn" id="7_32le7"]
+[ext_resource type="PackedScene" uid="uid://dpco4kch0jxbj" path="res://scenes/slime.tscn" id="8_3nqa4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36bjx"]
 texture = ExtResource("2_63r04")
@@ -806,7 +807,6 @@ y_sort_enabled = true
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_dg4ct")
-collision_visibility_mode = 1
 format = 2
 layer_0/name = "1"
 layer_0/z_index = -2
@@ -848,3 +848,9 @@ position = Vector2(81, 71)
 
 [node name="stick_collectable3" parent="." instance=ExtResource("7_32le7")]
 position = Vector2(261, 135)
+
+[node name="slime" parent="." instance=ExtResource("8_3nqa4")]
+position = Vector2(459, 158)
+
+[node name="slime2" parent="." instance=ExtResource("8_3nqa4")]
+position = Vector2(300, -78)

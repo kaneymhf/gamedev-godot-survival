@@ -49,6 +49,7 @@ animation = &"apples"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickable_area"]
 shape = SubResource("CircleShape2D_8as2s")
+debug_color = Color(0.772549, 0.0509804, 0.423529, 0.419608)
 
 [node name="growth_timer" type="Timer" parent="."]
 wait_time = 3.0
@@ -68,6 +69,7 @@ position = Vector2(-8, -6)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_u4n8f")
+debug_color = Color(0.772549, 0.0509804, 0.423529, 0.419608)
 
 [connection signal="body_entered" from="pickable_area" to="." method="_on_pickable_area_body_entered"]
 [connection signal="body_exited" from="pickable_area" to="." method="_on_pickable_area_body_exited"]
