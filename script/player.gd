@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var animSprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var spawn_arrow: Marker2D = $Marker2D
 @onready var arrow = preload("res://scenes/arrow.tscn")
+@onready var camera: Camera2D = $Camera2D
 
 var speed = 100
 var player_state: String = "idle"

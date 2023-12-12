@@ -5,13 +5,11 @@ extends CharacterBody2D
 @onready var collision = $CollisionShape2D
 @onready var animation = $AnimatedSprite2D
 @onready var slime_collectable = preload("res://scenes/slime_collectable.tscn")
-@onready var drop_timeout: Timer = $drop_timeout
 
 @export var item: InventoryItem
 
 var speed: int = 100
 var health: float = 100.0
-var damage
 
 var dead: bool = false
 var player_in_area: bool = false
